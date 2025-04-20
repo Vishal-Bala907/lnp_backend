@@ -11,7 +11,7 @@ const app = express();
 app.use(
   cors({
     origin: "https://lnp-landing-page.vercel.app", // exact origin of your frontend
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
