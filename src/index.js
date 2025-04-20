@@ -16,7 +16,7 @@ app.use(
     credentials: true,
   })
 );
-
+app.options("*", cors()); // 👈 Add this line
 app.use(express.json());
 
 app.use("/checkout", checkoutRoutes);
