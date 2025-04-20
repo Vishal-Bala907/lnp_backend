@@ -8,15 +8,16 @@ const checkoutRoutes = require("./routes/checkoutRoutes");
 const app = express();
 // const cors = require("cors");
 
-app.use(express.json());
 app.use(
   cors({
-    origin: "https://lnp-landing-page.vercel.app", // exact origin
+    origin: "https://lnp-landing-page.vercel.app", // exact origin of your frontend
     methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
-app.options("*", cors()); // 👈 Add this line
+// app.options("*", cors()); // 👈 Add this line
+app.use(express.json());
 
 app.use("/checkout", checkoutRoutes);
 
