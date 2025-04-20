@@ -10,9 +10,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://lnp-landing-page.vercel.app", // exact origin of your frontend
+    origin: "https://lnp-landing-page.vercel.app", // exact origin
     methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
